@@ -4,7 +4,9 @@ import keys from './keys';
 
 // Components
 import Recipies from './Components/Recipies';
-import Loading from './Components/Loading'
+import Loading from './Components/Loading';
+import Footer from './Components/Footer';
+import Header from './Components/Header';
 
 
 function App() {
@@ -47,14 +49,15 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <div className="container">
         <form className="search-form mt-5" autoComplete="off" onSubmit={handleFormSubmit}>
-          <input type="text" name="recipeName" id="recipeName" className="search-bar" />
+          <input type="text" name="recipeName" id="recipeName" className="search-bar" placeholder="Enter Ingredient.." />
           <button type="submit" className="search-button"><i className="fa fa-search" aria-hidden="true"></i> Search</button>
         </form>
       </div>
       <div className="container mt-5">
-        <div>
+        <div className="mb-2">
           {(() => {
             switch (loaded) {
               case true: return (
@@ -70,6 +73,7 @@ function App() {
           })()}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,14 @@
+.footer {
+    height: 50px;
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(216, 213, 213);
+    color: white;
+    text-align: center;
+  }
+
+  .icon{
+    margin-top: 30%;
+  }
